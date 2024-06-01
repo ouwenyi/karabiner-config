@@ -1,6 +1,6 @@
 import fs from "fs";
 import { KarabinerRules } from "./types";
-import { createHyperSubLayers, app, open, rectangle, shell } from "./utils";
+import { app, createHyperSubLayers, open } from "./utils";
 
 const rules: KarabinerRules[] = [
   // Define the Hyper key itself
@@ -74,10 +74,13 @@ const rules: KarabinerRules[] = [
       f: app("Finder"),
     },
 
+    // u = "University"
+    u: {},
+
     // c = "Chat"
     c: {
       d: app("Discord"),
-      w: open("WhatsApp"),
+      w: app("WhatsApp"),
       t: app("Telegram"),
       s: app("Signal"),
       // s: app("Slack"),
