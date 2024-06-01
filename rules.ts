@@ -1,24 +1,25 @@
-import fs from "fs";
-import { KarabinerRules } from "./types";
-import { app, createHyperSubLayers, open } from "./utils";
+import fs from 'fs'
+import { KarabinerRules } from './types'
+import { app, createHyperSubLayers, open } from './utils'
+import { telegramUsernames } from './secrets'
 
 const rules: KarabinerRules[] = [
   // Define the Hyper key itself
   {
-    description: "Hyper Key (⌃⌥⇧⌘)",
+    description: 'Hyper Key (⌃⌥⇧⌘)',
     manipulators: [
       {
-        description: "Caps Lock -> Hyper Key",
+        description: 'Caps Lock -> Hyper Key',
         from: {
-          key_code: "caps_lock",
+          key_code: 'caps_lock',
           modifiers: {
-            optional: ["any"],
+            optional: ['any'],
           },
         },
         to: [
           {
             set_variable: {
-              name: "hyper",
+              name: 'hyper',
               value: 1,
             },
           },
@@ -26,33 +27,33 @@ const rules: KarabinerRules[] = [
         to_after_key_up: [
           {
             set_variable: {
-              name: "hyper",
+              name: 'hyper',
               value: 0,
             },
           },
         ],
         to_if_alone: [
           {
-            key_code: "escape",
+            key_code: 'escape',
           },
         ],
-        type: "basic",
+        type: 'basic',
       },
-      //      {
-      //        type: "basic",
-      //        description: "Disable CMD + Tab to force Hyper Key usage",
-      //        from: {
-      //          key_code: "tab",
-      //          modifiers: {
-      //            mandatory: ["left_command"],
-      //          },
-      //        },
-      //        to: [
-      //          {
-      //            key_code: "tab",
-      //          },
-      //        ],
-      //      },
+      {
+        type: 'basic',
+        description: 'Disable CMD + Tab to force Hyper Key usage',
+        from: {
+          key_code: 'tab',
+          modifiers: {
+            mandatory: ['left_command'],
+          },
+        },
+        to: [
+          {
+            key_code: 'tab',
+          },
+        ],
+      },
     ],
   },
   ...createHyperSubLayers({
@@ -64,14 +65,14 @@ const rules: KarabinerRules[] = [
 
     // o = "Open" applications
     o: {
-      a: app("Arc"),
-      v: app("Visual Studio Code"),
-      w: app("Webstorm"),
-      t: app("TickTick"),
+      a: app('Arc'),
+      v: app('Visual Studio Code'),
+      w: app('Webstorm'),
+      t: app('TickTick'),
       // *s*hell
-      s: app("Warp"),
-      o: app("Obsidian"),
-      f: app("Finder"),
+      s: app('Warp'),
+      o: app('Obsidian'),
+      f: app('Finder'),
     },
 
     // u = "University"
@@ -79,12 +80,16 @@ const rules: KarabinerRules[] = [
 
     // c = "Chat"
     c: {
-      d: app("Discord"),
-      w: app("WhatsApp"),
-      t: app("Telegram"),
-      s: app("Signal"),
+      d: app('Discord'),
+      w: app('WhatsApp'),
+      t: app('Telegram'),
+      s: app('Signal'),
       // s: app("Slack"),
-      m: app("Mail"),
+      m: app('Mail'),
+
+      // Individual people
+      o: open(`tg://resolve?domain=@${telegramUsernames.o}`),
+      y: open(`tg://resolve?domain=@${telegramUsernames.y}`),
     },
 
     // s = "System"
@@ -92,70 +97,70 @@ const rules: KarabinerRules[] = [
       u: {
         to: [
           {
-            key_code: "volume_increment",
+            key_code: 'volume_increment',
           },
         ],
       },
       j: {
         to: [
           {
-            key_code: "volume_decrement",
+            key_code: 'volume_decrement',
           },
         ],
       },
       i: {
         to: [
           {
-            key_code: "display_brightness_increment",
+            key_code: 'display_brightness_increment',
           },
         ],
       },
       k: {
         to: [
           {
-            key_code: "display_brightness_decrement",
+            key_code: 'display_brightness_decrement',
           },
         ],
       },
       l: {
         to: [
           {
-            key_code: "q",
-            modifiers: ["right_control", "right_command"],
+            key_code: 'q',
+            modifiers: ['right_control', 'right_command'],
           },
         ],
       },
       p: {
         to: [
           {
-            key_code: "play_or_pause",
+            key_code: 'play_or_pause',
           },
         ],
       },
       semicolon: {
         to: [
           {
-            key_code: "fastforward",
+            key_code: 'fastforward',
           },
         ],
       },
-      c: open("raycast://extensions/raycast/system/open-camera"),
+      c: open('raycast://extensions/raycast/system/open-camera'),
     },
 
     // v = "moVe" which isn't "m" because we want it to be on the left hand
     // so that hjkl work like they do in vim
     v: {
       h: {
-        to: [{ key_code: "left_arrow" }],
+        to: [{ key_code: 'left_arrow' }],
       },
       j: {
-        to: [{ key_code: "down_arrow" }],
+        to: [{ key_code: 'down_arrow' }],
       },
       k: {
-        to: [{ key_code: "up_arrow" }],
+        to: [{ key_code: 'up_arrow' }],
       },
       l: {
-        to: [{ key_code: "right_arrow" }],
+        to: [{ key_code: 'right_arrow' }],
       },
       // Magicmove via homerow.app
       // m: {
@@ -170,35 +175,35 @@ const rules: KarabinerRules[] = [
       //   to: [{ key_code: "d", modifiers: ["right_shift", "right_command"] }],
       // },
       u: {
-        to: [{ key_code: "page_down" }],
+        to: [{ key_code: 'page_down' }],
       },
       i: {
-        to: [{ key_code: "page_up" }],
+        to: [{ key_code: 'page_up' }],
       },
     },
 
     // m = "Music"e
     m: {
       p: {
-        to: [{ key_code: "play_or_pause" }],
+        to: [{ key_code: 'play_or_pause' }],
       },
       n: {
-        to: [{ key_code: "fastforward" }],
+        to: [{ key_code: 'fastforward' }],
       },
       b: {
-        to: [{ key_code: "rewind" }],
+        to: [{ key_code: 'rewind' }],
       },
     },
 
     // r = "Raycast"
     r: {
       e: open(
-        "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
+        'raycast://extensions/raycast/emoji-symbols/search-emoji-symbols',
       ),
-      p: open("raycast://extensions/raycast/raycast/confetti"),
+      p: open('raycast://extensions/raycast/raycast/confetti'),
       // a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
       h: open(
-        "raycast://extensions/raycast/clipboard-history/clipboard-history"
+        'raycast://extensions/raycast/clipboard-history/clipboard-history',
       ),
       // 1: open(
       //   "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
@@ -208,10 +213,10 @@ const rules: KarabinerRules[] = [
       // ),
     },
   }),
-];
+]
 
 fs.writeFileSync(
-  "karabiner.json",
+  'karabiner.json',
   JSON.stringify(
     {
       global: {
@@ -219,7 +224,7 @@ fs.writeFileSync(
       },
       profiles: [
         {
-          name: "Default",
+          name: 'Default',
           complex_modifications: {
             rules,
           },
@@ -227,6 +232,6 @@ fs.writeFileSync(
       ],
     },
     null,
-    2
-  )
-);
+    2,
+  ),
+)
