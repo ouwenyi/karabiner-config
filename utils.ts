@@ -209,3 +209,18 @@ export function rectangle(name: string): LayerCommand {
 export function app(name: string): LayerCommand {
   return open(`-a '${name}.app'`)
 }
+
+/**
+ * Shortcut for "switching to a language" command (of which there are a bunch)
+ */
+export function switchToLanguage(languageCode: string): LayerCommand {
+  return {
+    to: [
+      {
+        select_input_source: {
+          language: languageCode,
+        },
+      }
+    ]
+  }
+}

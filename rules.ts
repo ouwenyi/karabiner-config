@@ -1,6 +1,6 @@
 import fs from 'fs'
 import { KarabinerRules } from './types'
-import { app, createHyperSubLayers, open } from './utils'
+import { app, createHyperSubLayers, open, switchToLanguage } from './utils'
 import { telegramUsernames } from './secrets'
 
 const rules: KarabinerRules[] = [
@@ -71,8 +71,11 @@ const rules: KarabinerRules[] = [
       t: app('TickTick'),
       // *s*hell
       s: app('Warp'),
-      o: app('Obsidian'),
+      // *m*arkdown
+      m: app('Obsidian'),
       f: app('Finder'),
+      // M*u*sic
+      u: app('Music'),
     },
 
     // u = "University"
@@ -90,6 +93,15 @@ const rules: KarabinerRules[] = [
       // Individual people
       o: open(`tg://resolve?domain=@${telegramUsernames.o}`),
       y: open(`tg://resolve?domain=@${telegramUsernames.y}`),
+    },
+
+    // l = "Language"
+    l: {
+      e: switchToLanguage('en'),
+      c: switchToLanguage('zh'),
+      z: switchToLanguage('zh'),
+      d: switchToLanguage('de'),
+      g: switchToLanguage('de'),
     },
 
     // s = "System"
