@@ -194,7 +194,7 @@ const rules: KarabinerRules[] = [
       },
     },
 
-    // m = "Music"e
+    // m = "Music"
     m: {
       p: {
         to: [{ key_code: 'play_or_pause' }],
