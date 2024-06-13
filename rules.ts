@@ -120,6 +120,14 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
+      // m = "Mute"
+      m: {
+        to: [
+          {
+            key_code: 'mute',
+          },
+        ],
+      },
       i: {
         to: [
           {
@@ -134,6 +142,7 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
+      // l = "Lock"
       l: {
         to: [
           {
