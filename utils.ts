@@ -220,7 +220,7 @@ export function switchToLanguage(languageCode: string): LayerCommand {
         select_input_source: {
           language: languageCode,
         },
-      }
-    ]
+      },
+    ],
   }
 }

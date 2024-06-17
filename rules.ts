@@ -75,7 +75,8 @@ const rules: KarabinerRules[] = [
       m: app('Obsidian'),
       f: app('Finder'),
       // M*u*sic
-      u: app('Music'),
+      u: app('Spotify'),
+      b: app('Bruno'),
     },
 
     // u = "University"
