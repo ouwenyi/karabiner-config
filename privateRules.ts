@@ -22,5 +22,5 @@ export const privateRules: KarabinerRules[] = [
       o: open(`tg://resolve?domain=@${telegramUsernames.o}`),
       y: open(`tg://resolve?domain=@${telegramUsernames.y}`),
     },
-  })
+  }),
 ]

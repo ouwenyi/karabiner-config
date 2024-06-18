@@ -82,8 +82,7 @@ const rules: KarabinerRules[] = [
     u: {},
 
     // c = "Chat"
-    c: {
-    },
+    c: {},
 
     // l = "Language"
     l: {

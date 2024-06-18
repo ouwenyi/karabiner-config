@@ -15,7 +15,7 @@ export const workRules: KarabinerRules[] = [
     c: {
       s: app('Slack'),
 
-      ...workSlackDeepLinks
+      ...workSlackDeepLinks,
     },
-  })
+  }),
 ]
