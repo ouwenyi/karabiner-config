@@ -1,7 +1,8 @@
 import fs from 'fs'
 import { KarabinerRules } from './types'
 import { app, createHyperSubLayers, open, switchToLanguage } from './utils'
-import { telegramUsernames } from './secrets'
+import { workRules } from './workRules'
+import { privateRules } from './privateRules'
 
 const rules: KarabinerRules[] = [
   // Define the Hyper key itself
@@ -71,8 +72,6 @@ const rules: KarabinerRules[] = [
       t: app('TickTick'),
       // *s*hell
       s: app('Warp'),
-      // *m*arkdown
-      m: app('Obsidian'),
       f: app('Finder'),
       // M*u*sic
       u: app('Spotify'),
@@ -84,16 +83,6 @@ const rules: KarabinerRules[] = [
 
     // c = "Chat"
     c: {
-      d: app('Discord'),
-      w: app('WhatsApp'),
-      t: app('Telegram'),
-      s: app('Signal'),
-      // s: app("Slack"),
-      m: app('Mail'),
-
-      // Individual people
-      o: open(`tg://resolve?domain=@${telegramUsernames.o}`),
-      y: open(`tg://resolve?domain=@${telegramUsernames.y}`),
     },
 
     // l = "Language"
@@ -235,6 +224,8 @@ const rules: KarabinerRules[] = [
       // ),
     },
   }),
+  ...privateRules,
+  // ...workRules,
 ]
 
 fs.writeFileSync(
