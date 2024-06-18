@@ -1,6 +1,6 @@
 import fs from 'fs'
 import { KarabinerRules } from './types'
-import { app, createHyperSubLayers, open, switchToLanguage } from './utils'
+import { app, createHyperSubLayers, deeplink, switchToLanguage } from './utils'
 import { workRules } from './workRules'
 import { privateRules } from './privateRules'
 
@@ -58,7 +58,7 @@ const rules: KarabinerRules[] = [
     ],
   },
   ...createHyperSubLayers({
-    // spacebar: open(
+    // spacebar: deeplink(
     //   "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
     // ),
     // b = "B"rowse
@@ -154,7 +154,7 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      c: open('raycast://extensions/raycast/system/open-camera'),
+      c: deeplink('raycast://extensions/raycast/system/open-camera'),
     },
 
     // v = "moVe" which isn't "m" because we want it to be on the left hand
@@ -207,18 +207,18 @@ const rules: KarabinerRules[] = [
 
     // r = "Raycast"
     r: {
-      e: open(
+      e: deeplink(
         'raycast://extensions/raycast/emoji-symbols/search-emoji-symbols',
       ),
-      p: open('raycast://extensions/raycast/raycast/confetti'),
-      // a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
-      h: open(
+      p: deeplink('raycast://extensions/raycast/raycast/confetti'),
+      // a: deeplink("raycast://extensions/raycast/raycast-ai/ai-chat"),
+      h: deeplink(
         'raycast://extensions/raycast/clipboard-history/clipboard-history',
       ),
-      // 1: open(
+      // 1: deeplink(
       //   "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
       // ),
-      // 2: open(
+      // 2: deeplink(
       //   "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
       // ),
     },

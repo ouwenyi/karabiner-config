@@ -166,6 +166,9 @@ export function open(...what: string[]): LayerCommand {
   }
 }
 
+export const deeplink = (deepLink: string): LayerCommand =>
+  open(`"${deepLink}"`)
+
 /**
  * Utility function to create a LayerCommand from a tagged template literal
  * where each line is a shell command to be executed.

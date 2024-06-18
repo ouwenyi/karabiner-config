@@ -1,6 +1,6 @@
 import { telegramUsernames } from './secrets'
 import { KarabinerRules } from './types'
-import { app, createHyperSubLayers, open } from './utils'
+import { app, createHyperSubLayers, deeplink } from './utils'
 
 export const privateRules: KarabinerRules[] = [
   ...createHyperSubLayers({
@@ -19,8 +19,8 @@ export const privateRules: KarabinerRules[] = [
       m: app('Mail'),
 
       // Individual people
-      o: open(`tg://resolve?domain=@${telegramUsernames.o}`),
-      y: open(`tg://resolve?domain=@${telegramUsernames.y}`),
+      o: deeplink(`tg://resolve?domain=@${telegramUsernames.o}`),
+      y: deeplink(`tg://resolve?domain=@${telegramUsernames.y}`),
     },
   }),
 ]
