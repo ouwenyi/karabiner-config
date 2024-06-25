@@ -216,6 +216,7 @@ const rules: KarabinerRules[] = [
       h: deeplink(
         'raycast://extensions/raycast/clipboard-history/clipboard-history',
       ),
+      m: deeplink('raycast://extensions/raycast/navigation/search-menu-items'),
       // 1: deeplink(
       //   "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
       // ),
