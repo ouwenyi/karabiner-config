@@ -69,7 +69,7 @@ const rules: KarabinerRules[] = [
       a: app('Arc'),
       v: app('Visual Studio Code'),
       w: app('Webstorm'),
-      i: app('IntelliJ IDEA'),
+      i: app('IntelliJ IDEA Ultimate'),
       t: app('TickTick'),
       // *s*hell
       s: app('Warp'),

@@ -7,7 +7,6 @@ export const workRules: KarabinerRules[] = [
     // o = "Open" applications
     o: {
       w: app('IntelliJ IDEA Ultimate'),
-      i: app('IntelliJ IDEA Ultimate'),
       l: app('Logseq'),
     },
 
