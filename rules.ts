@@ -3,6 +3,7 @@ import { KarabinerRules } from './types'
 import { app, createHyperSubLayers, deeplink, switchToLanguage } from './utils'
 import { workRules } from './workRules'
 import { privateRules } from './privateRules'
+import { telegramUsernames } from './secrets'
 
 const rules: KarabinerRules[] = [
   // Define the Hyper key itself
@@ -68,22 +69,21 @@ const rules: KarabinerRules[] = [
     o: {
       a: app('Arc'),
       v: app('Visual Studio Code'),
-      w: app('Webstorm'),
+      p: app('PyCharm'),
       i: app('IntelliJ IDEA'),
       t: app('TickTick'),
-      // *s*hell
-      s: app('Warp'),
+      w: app('Warp'),
       f: app('Finder'),
-      // M*u*sic
-      u: app('Spotify'),
-      b: app('Bruno'),
+      s: app('Spotify'),
     },
 
     // u = "University"
     u: {},
 
     // c = "Chat"
-    c: {},
+    c: {
+      m: deeplink(`tg://resolve?domain=@${telegramUsernames.m}`),
+    },
 
     // l = "Language"
     l: {
@@ -216,7 +216,7 @@ const rules: KarabinerRules[] = [
       h: deeplink(
         'raycast://extensions/raycast/clipboard-history/clipboard-history',
       ),
-      m: deeplink('raycast://extensions/raycast/navigation/search-menu-items'),
+      f: deeplink('raycast://extensions/raycast/navigation/search-menu-items'),
       // 1: deeplink(
       //   "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
       // ),
