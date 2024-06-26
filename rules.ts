@@ -77,6 +77,7 @@ const rules: KarabinerRules[] = [
       // M*u*sic
       u: app('Spotify'),
       b: app('Bruno'),
+      c: deeplink('raycast://script-commands/open-calendar'),
     },
 
     // u = "University"
