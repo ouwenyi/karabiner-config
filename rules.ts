@@ -70,11 +70,13 @@ const rules: KarabinerRules[] = [
       a: app('Arc'),
       v: app('Visual Studio Code'),
       p: app('PyCharm'),
-      i: app('IntelliJ IDEA'),
+      i: app('IntelliJ IDEA Ultimate'),
       t: app('TickTick'),
       w: app('Warp'),
       f: app('Finder'),
-      s: app('Spotify'),
+      // M*u*sic
+      u: app('Spotify'),
+      b: app('Bruno'),
     },
 
     // u = "University"
