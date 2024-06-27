@@ -1,6 +1,6 @@
 import { workSlackDeepLinks } from './secrets'
 import { KarabinerRules } from './types'
-import { app, createHyperSubLayers } from './utils'
+import { app, createHyperSubLayers, deeplink } from './utils'
 
 export const workRules: KarabinerRules[] = [
   ...createHyperSubLayers({
@@ -13,6 +13,7 @@ export const workRules: KarabinerRules[] = [
     // c = "Chat"
     c: {
       s: app('Slack'),
+      m: deeplink('raycast://extensions/vitoorgomes/google-meet/default-profile'),
 
       ...workSlackDeepLinks,
     },
