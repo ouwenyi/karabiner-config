@@ -1,6 +1,6 @@
 import fs from 'fs'
 import { KarabinerRules } from './types'
-import { app, createHyperSubLayers, deeplink, switchToLanguage } from './utils'
+import { app, createHyperSubLayers, deeplink, shell, switchToLanguage } from './utils'
 import { workRules } from './workRules'
 import { privateRules } from './privateRules'
 
@@ -93,6 +93,24 @@ const rules: KarabinerRules[] = [
       z: switchToLanguage('zh'),
       d: switchToLanguage('de'),
       g: switchToLanguage('de'),
+    },
+
+    // f = "Focus"
+    f: {
+      // *C*lear
+      c: shell`shortcuts run "Turn off Focus"`,
+      // *W*ork
+      w: shell`shortcuts run "Activate Work Focus"`,
+      // *U*niversity
+      u: shell`shortcuts run "Activate Uni Focus"`,
+      // *P*ersonal
+      p: shell`shortcuts run "Activate Personal Focus"`,
+      // *T*utorial
+      t: shell`shortcuts run "Activate Tutorial Focus"`,
+      // *S*leep
+      s: shell`shortcuts run "Activate Sleep Focus"`,
+      // *D*o Not Disturb
+      d: shell`shortcuts run "Activate Do Not Disturb Focus"`,
     },
 
     // s = "System"
