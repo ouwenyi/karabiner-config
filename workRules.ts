@@ -13,7 +13,9 @@ export const workRules: KarabinerRules[] = [
     // c = "Chat"
     c: {
       s: app('Slack'),
-      m: deeplink('raycast://extensions/vitoorgomes/google-meet/default-profile'),
+      m: deeplink('raycast://script-commands/open-work-gmail'),
+      // *V*ideo chat
+      v: deeplink('raycast://extensions/vitoorgomes/google-meet/default-profile'),
 
       ...workSlackDeepLinks,
     },
