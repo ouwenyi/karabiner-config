@@ -227,7 +227,7 @@ const rules: KarabinerRules[] = [
         'raycast://extensions/raycast/emoji-symbols/search-emoji-symbols',
       ),
       p: deeplink('raycast://extensions/raycast/raycast/confetti'),
-      // a: deeplink("raycast://extensions/raycast/raycast-ai/ai-chat"),
+      a: deeplink("raycast://extensions/raycast/raycast-ai/ai-chat"),
       h: deeplink(
         'raycast://extensions/raycast/clipboard-history/clipboard-history',
       ),
