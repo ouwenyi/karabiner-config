@@ -88,6 +88,12 @@ const rules: KarabinerRules[] = [
       z: app('Zed'),
     },
 
+    // n = "New"
+    n: {
+      z: deeplink('raycast://extensions/ewgenius/zed-recent-projects/search'),
+      v: deeplink('raycast://extensions/thomas/visual-studio-code/index'),
+    },
+
     // u = "University"
     u: {},
 
