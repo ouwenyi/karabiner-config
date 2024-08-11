@@ -1,6 +1,12 @@
 import fs from 'fs'
 import { KarabinerRules } from './types'
-import { app, createHyperSubLayers, deeplink, shell, switchToLanguage } from './utils'
+import {
+  app,
+  createHyperSubLayers,
+  deeplink,
+  shell,
+  switchToLanguage,
+} from './utils'
 import { workRules } from './workRules'
 import { privateRules } from './privateRules'
 
@@ -78,6 +84,8 @@ const rules: KarabinerRules[] = [
       u: app('Spotify'),
       b: app('Bruno'),
       c: deeplink('raycast://script-commands/open-calendar'),
+      p: app('Preview'),
+      z: app('Zed'),
     },
 
     // u = "University"
@@ -227,7 +235,7 @@ const rules: KarabinerRules[] = [
         'raycast://extensions/raycast/emoji-symbols/search-emoji-symbols',
       ),
       p: deeplink('raycast://extensions/raycast/raycast/confetti'),
-      a: deeplink("raycast://extensions/raycast/raycast-ai/ai-chat"),
+      a: deeplink('raycast://extensions/raycast/raycast-ai/ai-chat'),
       h: deeplink(
         'raycast://extensions/raycast/clipboard-history/clipboard-history',
       ),

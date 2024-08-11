@@ -8,6 +8,7 @@ export const privateRules: KarabinerRules[] = [
     o: {
       // *m*arkdown
       m: app('Obsidian'),
+      n: app('Notion'),
     },
 
     // c = "Chat"
