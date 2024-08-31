@@ -254,6 +254,23 @@ const rules: KarabinerRules[] = [
       //   "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
       // ),
     },
+
+    // w = "Window management"
+    w: {
+      // these mimic vim motions
+      h: deeplink('raycast://extensions/raycast/window-management/left-half'),
+      j: deeplink('raycast://extensions/raycast/window-management/bottom-half'),
+      k: deeplink('raycast://extensions/raycast/window-management/top-half'),
+      l: deeplink('raycast://extensions/raycast/window-management/right-half'),
+
+      m: deeplink('raycast://extensions/raycast/window-management/maximize'),
+      p: deeplink(
+        'raycast://extensions/raycast/window-management/previous-display',
+      ),
+      n: deeplink(
+        'raycast://extensions/raycast/window-management/next-display',
+      ),
+    },
   }),
   ...privateRules,
   // ...workRules,
