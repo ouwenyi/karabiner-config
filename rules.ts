@@ -264,6 +264,7 @@ const rules: KarabinerRules[] = [
       l: deeplink('raycast://extensions/raycast/window-management/right-half'),
 
       m: deeplink('raycast://extensions/raycast/window-management/maximize'),
+      f: deeplink("raycast://extensions/raycast/window-management/toggle-fullscreen"),
       p: deeplink(
         'raycast://extensions/raycast/window-management/previous-display',
       ),
