@@ -13,6 +13,10 @@ type HyperKeySublayer = {
   [key_code in KeyCode]?: LayerCommand
 }
 
+export type HyperKeyLayers = {
+  [key_code in KeyCode]?: HyperKeySublayer | LayerCommand
+}
+
 /**
  * Create a Hyper Key sublayer, where every command is prefixed with a key
  * e.g. Hyper + O ("Open") is the "open applications" layer, I can press
@@ -103,9 +107,9 @@ export function createHyperSubLayer(
  * have all the hyper variable names in order to filter them and make sure only one
  * activates at a time
  */
-export function createHyperSubLayers(subLayers: {
-  [key_code in KeyCode]?: HyperKeySublayer | LayerCommand
-}): KarabinerRules[] {
+export function createHyperSubLayers(
+  subLayers: HyperKeyLayer,
+): KarabinerRules[] {
   const allSubLayerVariables = (
     Object.keys(subLayers) as (keyof typeof subLayers)[]
   ).map((sublayer_key) => generateSubLayerVariableName(sublayer_key))
