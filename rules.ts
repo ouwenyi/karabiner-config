@@ -97,9 +97,6 @@ const rules: KarabinerRules[] = [
     // u = "University"
     u: {},
 
-    // c = "Chat"
-    c: {},
-
     // l = "Language"
     l: {
       e: switchToLanguage('en'),

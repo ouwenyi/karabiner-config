@@ -19,5 +19,11 @@ export const workRules: KarabinerRules[] = [
 
       ...workSlackDeepLinks,
     },
+
+    // j = "Jira"
+    j: {
+      // *F*ind
+      f: deeplink('raycast://extensions/raycast/jira/search-issues')
+    }
   }),
 ]
