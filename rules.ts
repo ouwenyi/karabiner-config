@@ -21,18 +21,18 @@ const commonLayers: HyperKeyLayers = {
   // o = "Open" applications
   o: {
     a: app('Arc'),
-    v: app('Visual Studio Code'),
-    w: app('Webstorm'),
-    i: app('IntelliJ IDEA Ultimate'),
-    t: app('TickTick'),
-    // *s*hell
-    s: app('Warp'),
-    f: app('Finder'),
-    // M*u*sic
-    u: app('Spotify'),
     b: app('Bruno'),
     c: deeplink('raycast://script-commands/open-calendar'),
+    f: app('Finder'),
+    i: app('IntelliJ IDEA Ultimate'),
     p: app('Preview'),
+    // *s*hell
+    s: app('Warp'),
+    t: app('TickTick'),
+    // M*u*sic
+    u: app('Spotify'),
+    v: app('Visual Studio Code'),
+    w: app('Webstorm'),
     z: app('Zed'),
   },
 
@@ -40,6 +40,7 @@ const commonLayers: HyperKeyLayers = {
   n: {
     z: deeplink('raycast://extensions/ewgenius/zed-recent-projects/search'),
     v: deeplink('raycast://extensions/thomas/visual-studio-code/index'),
+    t: deeplink('raycast://extensions/appest/ticktick/create'),
   },
 
   // u = "University"
