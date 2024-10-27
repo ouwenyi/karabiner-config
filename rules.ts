@@ -40,7 +40,16 @@ const commonLayers: HyperKeyLayers = {
   n: {
     z: deeplink('raycast://extensions/ewgenius/zed-recent-projects/search'),
     v: deeplink('raycast://extensions/thomas/visual-studio-code/index'),
-    t: deeplink('raycast://extensions/appest/ticktick/create'),
+    t: {
+      to: [
+        // This shortcut is set in TickTick because the default
+        // doesn't seem to work anymore.
+        {
+          key_code: 'a',
+          modifiers: ['shift', 'control', 'command', 'option'],
+        },
+      ],
+    },
   },
 
   // u = "University"
