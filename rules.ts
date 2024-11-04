@@ -66,16 +66,17 @@ const commonLayers: HyperKeyLayers = {
 
   // f = "Focus"
   f: {
+    a: shell`shortcuts run "Activate Apple Intelligence Focus"`,
     // *C*lear
     c: shell`shortcuts run "Turn off Focus"`,
+    d: shell`shortcuts run "Activate Do Not Disturb Focus"`,
     // *O*ff
     o: shell`shortcuts run "Turn off Focus"`,
-    w: shell`shortcuts run "Activate Work Focus"`,
-    u: shell`shortcuts run "Activate Uni Focus"`,
     p: shell`shortcuts run "Activate Personal Focus"`,
-    t: shell`shortcuts run "Activate Tutorial Focus"`,
     s: shell`shortcuts run "Activate Sleep Focus"`,
-    d: shell`shortcuts run "Activate Do Not Disturb Focus"`,
+    t: shell`shortcuts run "Activate Tutorial Focus"`,
+    u: shell`shortcuts run "Activate Uni Focus"`,
+    w: shell`shortcuts run "Activate Work Focus"`,
   },
 
   // s = "System"
