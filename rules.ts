@@ -38,8 +38,6 @@ const commonLayers: HyperKeyLayers = {
 
   // n = "New"
   n: {
-    z: deeplink('raycast://extensions/ewgenius/zed-recent-projects/search'),
-    v: deeplink('raycast://extensions/thomas/visual-studio-code/index'),
     t: {
       to: [
         // This shortcut is set in TickTick because the default
@@ -50,6 +48,8 @@ const commonLayers: HyperKeyLayers = {
         },
       ],
     },
+    v: deeplink('raycast://extensions/thomas/visual-studio-code/index'),
+    z: deeplink('raycast://extensions/ewgenius/zed-recent-projects/search'),
   },
 
   // u = "University"
@@ -57,11 +57,11 @@ const commonLayers: HyperKeyLayers = {
 
   // l = "Language"
   l: {
-    e: switchToLanguage('en'),
     c: switchToLanguage('zh'),
-    z: switchToLanguage('zh'),
     d: switchToLanguage('de'),
+    e: switchToLanguage('en'),
     g: switchToLanguage('de'),
+    z: switchToLanguage('zh'),
   },
 
   // f = "Focus"
@@ -81,6 +81,7 @@ const commonLayers: HyperKeyLayers = {
 
   // s = "System"
   s: {
+    c: deeplink('raycast://extensions/raycast/system/open-camera'),
     u: {
       to: [
         {
@@ -140,7 +141,6 @@ const commonLayers: HyperKeyLayers = {
         },
       ],
     },
-    c: deeplink('raycast://extensions/raycast/system/open-camera'),
   },
 
   // v = "moVe" which isn't "m" because we want it to be on the left hand
