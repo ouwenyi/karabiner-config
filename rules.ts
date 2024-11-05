@@ -193,16 +193,17 @@ const commonLayers: HyperKeyLayers = {
 
   // r = "Raycast"
   r: {
+    a: deeplink('raycast://extensions/raycast/raycast-ai/ai-chat'),
     e: deeplink(
       'raycast://extensions/raycast/emoji-symbols/search-emoji-symbols',
     ),
-    p: deeplink('raycast://extensions/raycast/raycast/confetti'),
-    a: deeplink('raycast://extensions/raycast/raycast-ai/ai-chat'),
+    f: deeplink('raycast://extensions/raycast/file-search/search-files'),
+    g: deeplink('raycast://extensions/josephschmitt/gif-search/search'),
     h: deeplink(
       'raycast://extensions/raycast/clipboard-history/clipboard-history',
     ),
     m: deeplink('raycast://extensions/raycast/navigation/search-menu-items'),
-    g: deeplink('raycast://extensions/josephschmitt/gif-search/search'),
+    p: deeplink('raycast://extensions/raycast/raycast/confetti'),
     // 1: deeplink(
     //   "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
     // ),
