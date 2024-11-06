@@ -7,6 +7,7 @@ export const privateRules: HyperKeyLayers = {
     // *m*arkdown
     m: app('Obsidian'),
     n: app('Notion'),
+    p: app('Preview'),
   },
 
   // c = "Chat"
