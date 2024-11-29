@@ -220,6 +220,7 @@ const commonLayers: HyperKeyLayers = {
     l: deeplink('raycast://extensions/raycast/window-management/right-half'),
 
     m: deeplink('raycast://extensions/raycast/window-management/maximize'),
+    r: deeplink('raycast://extensions/raycast/window-management/restore'),
     f: deeplink(
       'raycast://extensions/raycast/window-management/toggle-fullscreen',
     ),
