@@ -17,6 +17,7 @@ export const privateRules: HyperKeyLayers = {
     t: app('Telegram'),
     s: app('Signal'),
     m: app('Mail'),
+    z: app('zoom.us'),
 
     // Individual people
     o: deeplink(`tg://resolve?domain=@${telegramUsernames.o}`),
