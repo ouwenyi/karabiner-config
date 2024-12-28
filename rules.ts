@@ -26,12 +26,13 @@ const commonLayers: HyperKeyLayers = {
     f: app('Finder'),
     i: app('IntelliJ IDEA Ultimate'),
     // *s*hell
-    s: app('Warp'),
+    s: app('Ghostty'),
     t: app('TickTick'),
     // M*u*sic
     u: app('Spotify'),
     v: app('Visual Studio Code'),
     w: app('Webstorm'),
+    x: app('XCode'),
     z: app('Zed'),
   },
 
