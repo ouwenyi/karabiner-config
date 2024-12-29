@@ -82,6 +82,8 @@ const commonLayers: HyperKeyLayers = {
   // s = "System"
   s: {
     c: deeplink('raycast://extensions/raycast/system/open-camera'),
+    // *A*ll *A*pps
+    a: app('Mission Control'),
     u: {
       to: [
         {
