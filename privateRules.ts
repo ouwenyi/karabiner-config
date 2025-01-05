@@ -13,10 +13,11 @@ export const privateRules: HyperKeyLayers = {
   // c = "Chat"
   c: {
     d: app('Discord'),
-    w: app('WhatsApp'),
-    t: app('Telegram'),
-    s: app('Signal'),
+    f: app('FaceTime'),
     m: app('Mail'),
+    s: app('Signal'),
+    t: app('Telegram'),
+    w: app('WhatsApp'),
     z: app('zoom.us'),
 
     // Individual people
