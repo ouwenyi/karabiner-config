@@ -25,6 +25,8 @@ const commonLayers: HyperKeyLayers = {
     c: deeplink('raycast://script-commands/open-calendar'),
     f: app('Finder'),
     i: app('IntelliJ IDEA Ultimate'),
+    // *m*arkdown
+    m: app('Obsidian'),
     // *s*hell
     s: app('Ghostty'),
     t: app('TickTick'),

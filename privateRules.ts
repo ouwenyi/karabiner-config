@@ -4,8 +4,6 @@ import { app, deeplink, HyperKeyLayers } from './utils'
 export const privateRules: HyperKeyLayers = {
   // o = "Open" applications
   o: {
-    // *m*arkdown
-    m: app('Obsidian'),
     n: app('Notion'),
     p: app('Preview'),
   },
