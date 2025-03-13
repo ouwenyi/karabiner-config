@@ -1,20 +1,29 @@
 import { workSlackDeepLinks } from './secrets'
-import { KarabinerRules } from './types'
-import { app, createHyperSubLayers } from './utils'
+import { app, deeplink, HyperKeyLayers } from './utils'
 
-export const workRules: KarabinerRules[] = [
-  ...createHyperSubLayers({
-    // o = "Open" applications
-    o: {
-      w: app('IntelliJ IDEA Ultimate'),
-      l: app('Logseq'),
-    },
+export const workRules: HyperKeyLayers = {
+  // o = "Open" applications
+  o: {
+    e: app('Microsoft Excel'),
+    l: app('Logseq'),
+    // *P*laywright is the only Chromium I run at work
+    p: app('Chromium'),
+    w: app('IntelliJ IDEA Ultimate'),
+  },
 
-    // c = "Chat"
-    c: {
-      s: app('Slack'),
+  // c = "Chat"
+  c: {
+    s: app('Slack'),
+    m: deeplink('raycast://script-commands/open-work-gmail'),
+    // *V*ideo chat
+    v: deeplink('raycast://extensions/vitoorgomes/google-meet/default-profile'),
 
-      ...workSlackDeepLinks,
-    },
-  }),
-]
+    ...workSlackDeepLinks,
+  },
+
+  // j = "Jira"
+  j: {
+    // *F*ind
+    f: deeplink('raycast://extensions/raycast/jira/search-issues'),
+  },
+}

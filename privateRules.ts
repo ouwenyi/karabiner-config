@@ -1,26 +1,25 @@
 import { telegramUsernames } from './secrets'
-import { KarabinerRules } from './types'
-import { app, createHyperSubLayers, deeplink } from './utils'
+import { app, deeplink, HyperKeyLayers } from './utils'
 
-export const privateRules: KarabinerRules[] = [
-  // ...createHyperSubLayers({
-  //   // o = "Open" applications
-  //   o: {
-  //     // *m*arkdown
-  //     m: app('Obsidian'),
-  //   },
+export const privateRules: HyperKeyLayers = {
+  // // o = "Open" applications
+  // o: {
+  //   n: app('Notion'),
+  //   p: app('Preview'),
+  // },
 
-  //   // c = "Chat"
-  //   c: {
-  //     d: app('Discord'),
-  //     w: app('WhatsApp'),
-  //     t: app('Telegram'),
-  //     s: app('Signal'),
-  //     m: app('Mail'),
+  // // c = "Chat"
+  // c: {
+  //   d: app('Discord'),
+  //   f: app('FaceTime'),
+  //   m: app('Mail'),
+  //   s: app('Signal'),
+  //   t: app('Telegram'),
+  //   w: app('WhatsApp'),
+  //   z: app('zoom.us'),
 
-  //     // Individual people
-  //     o: deeplink(`tg://resolve?domain=@${telegramUsernames.o}`),
-  //     y: deeplink(`tg://resolve?domain=@${telegramUsernames.y}`),
-  //   },
-  // }),
-]
+  //   // Individual people
+  //   o: deeplink(`tg://resolve?domain=@${telegramUsernames.o}`),
+  //   y: deeplink(`tg://resolve?domain=@${telegramUsernames.y}`),
+  // },
+}
