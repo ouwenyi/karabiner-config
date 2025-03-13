@@ -79,6 +79,11 @@ const rules: KarabinerRules[] = [
       b: app('Bruno'),
     },
 
+    // n = "New"
+    n: {
+      v: deeplink('raycast://extensions/thomas/visual-studio-code/index'),
+    },
+
     // u = "University"
     u: {},
 
@@ -213,7 +218,10 @@ const rules: KarabinerRules[] = [
       e: deeplink(
         'raycast://extensions/raycast/emoji-symbols/search-emoji-symbols',
       ),
+      // *P*arty
       p: deeplink('raycast://extensions/raycast/raycast/confetti'),
+      // *C*onfetti
+      c: deeplink('raycast://extensions/raycast/raycast/confetti'),
       // a: deeplink("raycast://extensions/raycast/raycast-ai/ai-chat"),
       h: deeplink(
         'raycast://extensions/raycast/clipboard-history/clipboard-history',
@@ -226,7 +234,26 @@ const rules: KarabinerRules[] = [
       //   "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
       // ),
     },
+
+    // w = "Window management"
+    w: {
+      // these mimic vim motions
+      l: deeplink('raycast://extensions/raycast/window-management/left-half'),
+      b: deeplink('raycast://extensions/raycast/window-management/bottom-half'),
+      t: deeplink('raycast://extensions/raycast/window-management/top-half'),
+      r: deeplink('raycast://extensions/raycast/window-management/right-half'),
+
+      m: deeplink('raycast://extensions/raycast/window-management/maximize'),
+      f: deeplink(
+        'raycast://extensions/raycast/window-management/toggle-fullscreen',
+      ),
+      p: deeplink(
+        'raycast://extensions/raycast/window-management/previous-display',
+      ),
+      n: deeplink('raycast://extensions/raycast/window-management/next-display'),
+    },
   }),
+  
   ...privateRules,
   // ...workRules,
 ]
