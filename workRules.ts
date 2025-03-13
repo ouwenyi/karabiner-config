@@ -4,6 +4,7 @@ import { app, deeplink, HyperKeyLayers } from './utils'
 export const workRules: HyperKeyLayers = {
   // o = "Open" applications
   o: {
+    e: app('Microsoft Excel'),
     l: app('Logseq'),
     // *P*laywright is the only Chromium I run at work
     p: app('Chromium'),
